@@ -1,0 +1,108 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+  scroll-behavior: smooth;
+}
+$primary: rgb(0, 0, 83);
+$secondary: rgb(1, 1, 102);
+$thirshary: blue;
+
+#nextmedia {
+  max-width: 2500px;
+  margin: auto;
+}
+.entertainment_active {
+  border-bottom: 2px solid white;
+  background: linear-gradient(90deg, rgb(0, 0, 255), rgb(128, 0, 128));
+
+  i {
+    pointer-events: none;
+  }
+}
+
+img {
+  width: 100%;
+}
+
+.nextmedia_logo {
+  width: 50px;
+  height: 50px;
+}
+input,
+textarea {
+  outline: none;
+  border: none;
+}
+button {
+  outline: none;
+  border: none;
+  padding: 5px 10px;
+  cursor: pointer;
+}
+a {
+  color: rgb(69, 69, 248);
+}
+
+ul {
+  list-style: none;
+}
+.error_message {
+  color: rgb(255, 255, 255);
+  letter-spacing: 2px;
+  font-size: 15px;
+  background: rgba(155, 15, 15, 0.4);
+  border-radius: 5px;
+  padding: 5px;
+  text-align: center;
+}
+.profile {
+  display: flex;
+  align-items: center;
+  .profile_image_container {
+    width: 40px;
+    height: 40px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .profile_image {
+      width: 30px;
+      height: 30px;
+      border-radius: 50%;
+      overflow: hidden;
+      color: navy;
+      background: white;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+}
+.loading {
+  background: rgba(0, 0, 0, 0.3);
+  position: fixed;
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  .loader {
+    width: 100px;
+    height: 100px;
+  }
+}
+
+@import "./header.scss";
+@import "./article.scss";
+@import "./signup.scss";
+@import "./signin.scss";
+@import "./wall.scss";
+@import "./chat.scss";
+@import "./createpost.scss";
+@import "./chatlist.scss";
+@import "./wall_left_sidebar.scss";
+@import "./wall_right_sidebar.scss";
+@import "./navigationbar.scss";

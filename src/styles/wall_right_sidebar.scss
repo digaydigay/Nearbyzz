@@ -1,0 +1,36 @@
+.wall_right_container {
+  display: flex;
+  justify-content: flex-end;
+}
+.right_sidebar {
+  background: linear-gradient(purple, #e70994);
+  position: relative;
+  width: 100px;
+  height: 100%;
+  transition: all ease-in 300ms;
+  z-index: 2;
+  overflow: hidden;
+
+  .user_economy {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    .economy {
+      background: rgba(1, 1, 128, 0.5);
+      margin-top: 10px;
+      padding: 10px 0;
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+  @media screen and (max-width: "780px") {
+    width: 0;
+    position: absolute;
+  }
+}
+.right_sidebar_off {
+  width: 100px;
+}

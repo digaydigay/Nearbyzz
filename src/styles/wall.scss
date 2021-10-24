@@ -1,0 +1,87 @@
+.wall_main {
+  height: calc(100vh - 55px);
+  display: grid;
+  grid-template-columns: auto auto 1fr auto auto;
+  position: relative;
+  overflow: hidden;
+
+  .wall_center_container {
+    background: rgb(219, 217, 217);
+    padding: 0 10px;
+    overflow: hidden;
+
+    .tooglecreate {
+      background: purple;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: white;
+      cursor: pointer;
+      max-width: max-content;
+      position: relative;
+      left: 50%;
+      transform: translate(-50%, 0);
+      padding: 10px;
+      border-radius: 0 0 10px 10px;
+
+      h5 {
+        margin: 0 10px;
+      }
+    }
+  }
+
+  .chevron_wrapper {
+    font-size: 25px;
+    color: rgb(248, 248, 248);
+    cursor: pointer;
+
+    .chevron_left {
+      background: purple;
+      height: 50px;
+      display: none;
+      position: absolute;
+      left: 0;
+      top: 50%;
+      transform: translate(0, -50%);
+      transition: all ease-in 300ms;
+      border-radius: 0 5px 5px 0;
+      padding: 2px;
+      @media screen and (max-width: "780px") {
+        display: block;
+      }
+      .toggle_chevron {
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+    }
+    .chevron_left_toggle {
+      left: 100px;
+    }
+    .chevron_right {
+      background: purple;
+      height: 50px;
+      display: none;
+      position: absolute;
+      right: 0;
+      top: 50%;
+      transform: translate(0, -50%);
+      transition: all ease-in 300ms;
+      border-radius: 5px 0 0 5px;
+      padding: 2px;
+      @media screen and (max-width: "780px") {
+        display: block;
+      }
+      .toggle_chevron {
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+    }
+    .chevron_right_toggle {
+      right: 100px;
+    }
+  }
+}

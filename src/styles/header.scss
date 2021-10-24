@@ -1,0 +1,125 @@
+.header_main {
+  position: relative;
+  z-index: 1000;
+  position: sticky;
+  position: -webkit-sticky;
+  top: 0;
+  .header_container {
+    min-height: 55px;
+    width: 100%;
+    background: rgb(128, 0, 128);
+    color: white;
+    padding: 0 10px;
+
+    display: grid;
+    grid-template-columns: 1fr auto;
+    align-items: center;
+
+    //   left sidebar
+    .left_header {
+      display: flex;
+      align-items: center;
+      color: #fdd4ef;
+    }
+
+    // nav_center start
+    .navbar_center_main {
+      visibility: hidden;
+      @media screen and (max-width: "780px") {
+        visibility: visible;
+      }
+    }
+    // nav center ends
+
+    //   Right header
+    .right_header {
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+      .profile {
+        display: flex;
+        align-items: center;
+        .profile_image_container {
+          width: 40px;
+          height: 40px;
+
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          .profile_image {
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            color: navy;
+            background: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+          }
+        }
+      }
+      .signout {
+        background: linear-gradient(
+          90deg,
+          rgba(0, 0, 255, 0.4),
+          rgba(128, 0, 128, 0.4)
+        );
+        border-bottom: 2px solid white;
+        &:hover {
+          background: linear-gradient(
+            90deg,
+            rgba(128, 0, 128, 0.4),
+            rgba(0, 0, 255, 0.4)
+          );
+        }
+      }
+    }
+  }
+
+  // headerr navbardopdown  start
+  .header_dropdown_main {
+    max-width: 300px;
+
+    ul {
+      z-index: 1000;
+      position: absolute;
+      right: 0;
+      display: none;
+      flex-direction: column;
+      align-items: center;
+      max-width: 400px;
+      background: rgb(26, 1, 95);
+      border-radius: 10px 5px 10px 10px;
+      padding-bottom: 15px;
+      max-width: 300px;
+      width: 300px;
+
+      li {
+        padding: 15px 10px 0;
+        cursor: pointer;
+        width: 100%;
+        text-align: center;
+        border-radius: 20px;
+        color: rgb(173, 173, 173);
+
+        &:hover {
+          color: rgb(255, 255, 255);
+        }
+      }
+    }
+    .bar_menu {
+      cursor: pointer;
+      font-size: 25px;
+      color: white;
+      &:hover ~ ul {
+        display: flex;
+      }
+    }
+
+    &:hover ul {
+      display: flex;
+      list-style: none;
+    }
+  }
+  // header navbardropdown ends
+}
