@@ -5,19 +5,19 @@ export default function WallLeft() {
   const { isWallLeft } = UseToggle();
   return (
     <div className={`left_sidebar ${!isWallLeft && "left_sidebar_off"}`}>
-      <ul className="user_economy">
-        <li className="economy">
+      <ul>
+        <li>
           <User />
         </li>
-        <li className="economy">
-          <div className="users">
+        <li>
+          <div className="friends">
             <div className="fas fa-user-friends"></div>
           </div>
         </li>
-        <li className="economy">
+        <li className="groups">
           <div className="fas fa-users"></div>
         </li>
-        <li className="economy">
+        <li className="page">
           <div className="fas fa-flag"></div>
         </li>
       </ul>

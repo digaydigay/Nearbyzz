@@ -1,5 +1,4 @@
 import React from "react";
-import nextmedia from "../assets/nextmedia.png";
 import { UseToggle } from "../Context/toogle";
 export default function CreatePost() {
   const { toggleCreate } = UseToggle();
@@ -13,12 +12,6 @@ export default function CreatePost() {
           </div>
           <div className="post_btn">
             <button>Post</button>
-          </div>
-        </div>
-
-        <div className="files">
-          <div className="file">
-            <img src={nextmedia} alt="" />
           </div>
         </div>
 

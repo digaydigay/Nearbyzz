@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import nextmedia from "../../assets/nextmedia.png";
+import nearbyzz from "../../assets/nearbyzz.png";
 import { Formik, Form, Field } from "formik";
 import * as Yup from "yup";
 import Formactions from "./formactions";
@@ -40,7 +40,7 @@ export default function SignUp() {
             <div className="signup_form_header">
               <h2>Sign Up</h2>
               <div className="nextmedia_logo">
-                <img src={nextmedia} alt="N" />
+                <img src={nearbyzz} alt="N" />
               </div>
             </div>
 

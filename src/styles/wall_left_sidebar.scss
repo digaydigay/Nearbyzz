@@ -1,27 +1,38 @@
 .left_sidebar {
-  background: linear-gradient(purple, #e70994);
+  background: linear-gradient(navy, rgb(3, 3, 230), navy);
   position: relative;
   width: 100px;
   overflow: hidden;
   height: 100%;
   transition: all ease-in 300ms;
-  z-index: 2;
 
-  .user_economy {
+  > ul {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    .economy {
-      background: rgba(1, 1, 128, 0.5);
-      margin-top: 10px;
-      padding: 10px 0;
-      width: 100%;
+
+    li {
+      margin: 10px 0;
+      display: flex;
+      justify-content: center;
+      cursor: pointer;
+      height: 40px;
+      width: 40px;
+      border-radius: 50px;
+      box-shadow: 0 1px 2px 1px black;
+      color: white;
+      background: linear-gradient(90deg, purple, navy);
       display: flex;
       justify-content: center;
       align-items: center;
+
+      &:hover {
+        transform: scale(0.9);
+      }
     }
   }
+
   @media screen and (max-width: "780px") {
     width: 0;
     position: absolute;

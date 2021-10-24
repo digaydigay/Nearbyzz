@@ -63,6 +63,8 @@ ul {
   .profile_image_container {
     width: 40px;
     height: 40px;
+    border-radius: 50px;
+    box-shadow: 0 1px 2px 1px black;
 
     display: flex;
     justify-content: center;
@@ -96,6 +98,7 @@ ul {
 }
 
 @import "./header.scss";
+@import "./headdropdown.scss";
 @import "./article.scss";
 @import "./signup.scss";
 @import "./signin.scss";
@@ -106,3 +109,5 @@ ul {
 @import "./wall_left_sidebar.scss";
 @import "./wall_right_sidebar.scss";
 @import "./navigationbar.scss";
+@import "./notification.scss";
+@import "./convos.scss";

@@ -7,6 +7,7 @@
   margin-top: 5px;
   background: rgba(0, 0, 0, 0.2);
   border-radius: 10px;
+  box-shadow: 0 4px 4px 1px rgb(44, 44, 44);
 
   transition: all ease-out 500ms;
   .post {
@@ -45,13 +46,13 @@
         margin: auto;
         border-radius: 5px;
         cursor: pointer;
-        background: linear-gradient(-90deg, blue, purple);
+
         color: white;
         font-size: 16px;
-        background: linear-gradient(90deg, rgb(0, 0, 255), rgb(128, 0, 128));
+        background: linear-gradient(90deg, navy, rgb(138, 0, 138));
         border-bottom: 2px solid white;
         &:hover {
-          background: linear-gradient(90deg, rgb(128, 0, 128), rgb(0, 0, 255));
+          background: linear-gradient(90deg, rgb(138, 0, 138), navy);
         }
       }
     }
@@ -89,14 +90,10 @@
           justify-content: center;
           align-items: center;
           margin: 0 10px;
-          background: linear-gradient(90deg, rgb(0, 0, 255), rgb(128, 0, 128));
+          background: linear-gradient(90deg, navy, rgb(138, 0, 138));
           border-bottom: 2px solid white;
           &:hover {
-            background: linear-gradient(
-              90deg,
-              rgb(128, 0, 128),
-              rgb(0, 0, 255)
-            );
+            background: linear-gradient(90deg, #8a008a, navy);
           }
 
           padding: 5px 10px;

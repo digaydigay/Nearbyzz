@@ -7,7 +7,7 @@ import { UseToggle } from "../Context/toogle";
 // components
 import CreatePost from "./CreatePost";
 import HeaderNavbar from "./HeaderNavbar";
-
+import Convos from "./Convos";
 export default function Home() {
   const {
     isWallLeft,
@@ -42,16 +42,21 @@ export default function Home() {
         >
           <i
             className={` ${
-              toggleCreate ? "fas fa-angle-up" : "fas fa-angle-down"
+              toggleCreate
+                ? "fas fa-chevron-circle-up"
+                : "fas fa-chevron-circle-down"
             }`}
           ></i>{" "}
           <h5>{toggleCreate ? " Cancel " : "Create"} Post</h5>{" "}
           <i
             className={` ${
-              toggleCreate ? "fas fa-angle-up" : "fas fa-angle-down"
+              toggleCreate
+                ? "fas fa-chevron-circle-up"
+                : "fas fa-chevron-circle-down"
             }`}
           ></i>
         </div>
+        <Convos />
       </div>
       <div className="chevron_wrapper">
         <div

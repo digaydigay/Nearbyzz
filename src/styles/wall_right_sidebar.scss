@@ -3,27 +3,37 @@
   justify-content: flex-end;
 }
 .right_sidebar {
-  background: linear-gradient(purple, #e70994);
+  background: linear-gradient(navy, rgb(3, 3, 230), navy);
   position: relative;
   width: 100px;
   height: 100%;
   transition: all ease-in 300ms;
   z-index: 2;
   overflow: hidden;
-
-  .user_economy {
+  z-index: 100;
+  ul {
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    .economy {
-      background: rgba(1, 1, 128, 0.5);
-      margin-top: 10px;
-      padding: 10px 0;
-      width: 100%;
+
+    li {
+      margin: 10px 0;
       display: flex;
       justify-content: center;
-      align-items: center;
+      .message_btn {
+        width: 40px;
+        height: 40px;
+        background: linear-gradient(90deg, purple, navy);
+        color: white;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 50px;
+        box-shadow: 0 1px 2px 1px black;
+        cursor: pointer;
+        &:hover {
+          transform: scale(0.9);
+        }
+      }
     }
   }
   @media screen and (max-width: "780px") {

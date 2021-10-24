@@ -1,6 +1,6 @@
 import React from "react";
 import "../styles/header.scss";
-import nextmedia from "../assets/nextmedia.png";
+import nearbyzz from "../assets/nearbyzz.png";
 
 // components
 import HeaderNavDropdown from "./HeaderNavDropdown";
@@ -10,7 +10,7 @@ export default function Header() {
       <div className="header_container">
         <div className="left_header">
           <div className="nextmedia_logo">
-            <img src={nextmedia} alt="nextmedia" />
+            <img src={nearbyzz} alt="nearbyzz" />
           </div>
           <h3>Nearbyzz</h3>
         </div>

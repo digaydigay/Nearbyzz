@@ -1,0 +1,28 @@
+.notification_wrapper {
+  position: relative;
+  cursor: pointer;
+
+  &:hover {
+    opacity: 0.8;
+  }
+  .notification_no {
+    position: absolute;
+    top: -20%;
+    left: 50%;
+    width: 20px;
+    height: 20px;
+    background: purple;
+    color: white;
+    font-size: 15px;
+    border-radius: 20px;
+    z-index: 2;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  color: white;
+  i {
+    font-size: 20px;
+  }
+}

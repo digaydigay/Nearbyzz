@@ -12,7 +12,7 @@ export default function HeaderNavDropdown() {
         <i className="fas fa-bars"></i>
       </div>
 
-      <ul className="entertainments">
+      <ul className="menu_list">
         {/* list start */}
         {currentuser && (
           <li>
@@ -27,6 +27,30 @@ export default function HeaderNavDropdown() {
                 </div>
               </div>
               <h5>{currentuser.displayName}</h5>
+            </div>
+          </li>
+        )}
+        {currentuser && (
+          <li>
+            <div>
+              <i className="fas fa-comment-alt"></i> <h5>Give Feedback</h5>
+              <h6>Help us to improve Nearbyzz</h6>
+            </div>
+          </li>
+        )}
+
+        {currentuser && (
+          <li>
+            <div>
+              <i className="fas fa-cogs"></i> <h5>Settings</h5>
+            </div>
+          </li>
+        )}
+        {currentuser && (
+          <li>
+            <div>
+              <i className="fas fa-question-circle"></i>{" "}
+              <h5>Privacy and Support</h5>
             </div>
           </li>
         )}
