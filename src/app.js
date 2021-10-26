@@ -10,6 +10,7 @@ import Articles from "./components/article";
 import SignUp from "./components/authentication/signup";
 import SignIn from "./components/authentication/signin";
 import Home from "./components/Wall";
+import Convos from "./components/Convos";
 // private Route
 import Privateroutes from "./private/privateroutes";
 // Provider
@@ -58,6 +59,8 @@ const App = () => {
                 component={Articles}
                 auth={false}
               />
+              <Privateroutes path="/convos" component={Convos} />
+              <Route path="/signup" component={SignUp} />
               <Route path="/signup" component={SignUp} />
               <Route path="/signin" component={SignIn} />
             </Switch>

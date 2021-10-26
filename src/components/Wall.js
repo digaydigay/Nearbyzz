@@ -7,7 +7,6 @@ import { UseToggle } from "../Context/toogle";
 // components
 import CreatePost from "./CreatePost";
 import HeaderNavbar from "./HeaderNavbar";
-import Convos from "./Convos";
 export default function Home() {
   const {
     isWallLeft,
@@ -56,7 +55,7 @@ export default function Home() {
             }`}
           ></i>
         </div>
-        <Convos />
+        {/* <Convos /> */}
       </div>
       <div className="chevron_wrapper">
         <div

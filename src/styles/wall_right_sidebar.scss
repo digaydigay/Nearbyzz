@@ -1,16 +1,18 @@
 .wall_right_container {
   display: flex;
   justify-content: flex-end;
+  animation: rightSide 500ms ease-in 1;
 }
 .right_sidebar {
-  background: linear-gradient(navy, rgb(3, 3, 230), navy);
+  background: linear-gradient(-90deg, purple, navy);
   position: relative;
   width: 100px;
   height: 100%;
   transition: all ease-in 300ms;
   z-index: 2;
   overflow: hidden;
-  z-index: 100;
+  z-index: 1000;
+  box-shadow: -3px 0 2px 1px rgb(99, 99, 99);
   ul {
     display: flex;
     flex-direction: column;
@@ -19,7 +21,7 @@
       margin: 10px 0;
       display: flex;
       justify-content: center;
-      .message_btn {
+      .convos_btn {
         width: 40px;
         height: 40px;
         background: linear-gradient(90deg, purple, navy);

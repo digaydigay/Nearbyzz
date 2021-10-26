@@ -1,11 +1,13 @@
 .left_sidebar {
-  background: linear-gradient(navy, rgb(3, 3, 230), navy);
+  background: linear-gradient(90deg, purple, navy);
   position: relative;
   width: 100px;
   overflow: hidden;
   height: 100%;
   transition: all ease-in 300ms;
-
+  z-index: 1000;
+  box-shadow: 3px 0 2px 1px rgb(99, 99, 99);
+  animation: leftSide 500ms ease-in 1;
   > ul {
     display: flex;
     flex-direction: column;

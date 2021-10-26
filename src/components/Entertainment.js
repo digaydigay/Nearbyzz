@@ -8,15 +8,17 @@ export default function Entertainment() {
   };
   return (
     <div className="entertainments">
-      <div
-        className={`entertainment ${
-          active === "home" && "entertainment_active"
-        }`}
-        id="home"
-        onClick={entertainment}
-      >
-        <i className="fas fa-home"></i>
-      </div>
+      <a href="/">
+        <div
+          className={`entertainment ${
+            active === "home" && "entertainment_active"
+          }`}
+          id="home"
+          onClick={entertainment}
+        >
+          <i className="fas fa-home"></i>
+        </div>
+      </a>
       <div
         className={`entertainment ${
           active === "video" && "entertainment_active"

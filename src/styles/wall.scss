@@ -9,10 +9,9 @@
     background: rgb(219, 217, 217);
     padding: 6px 10px;
     overflow: hidden;
-    position: relative;
-
+    animation: popin 300ms ease-in 1;
     .tooglecreate {
-      background: linear-gradient(navy, rgb(3, 3, 230), navy);
+      background: linear-gradient(navy, purple);
       display: flex;
       justify-content: center;
       align-items: center;
@@ -38,7 +37,7 @@
     z-index: 10001;
 
     .chevron_left {
-      background: linear-gradient(navy, rgb(3, 3, 230), navy);
+      background: linear-gradient(-90deg, navy, purple);
       height: 80px;
       width: 20px;
       display: none;
@@ -64,7 +63,7 @@
       left: 100px;
     }
     .chevron_right {
-      background: linear-gradient(navy, rgb(3, 3, 230), navy);
+      background: linear-gradient(90deg, navy, purple);
       height: 80px;
       display: none;
       position: absolute;

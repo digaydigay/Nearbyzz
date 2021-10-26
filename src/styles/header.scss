@@ -1,14 +1,14 @@
 .header_main {
   position: relative;
-  z-index: 1000;
+  z-index: 10004;
   position: sticky;
   position: -webkit-sticky;
   top: 0;
   .header_container {
     min-height: 55px;
     width: 100%;
-    background: linear-gradient(navy, rgb(3, 3, 230), navy);
-    box-shadow: 0 4px 4px 1px rgb(7, 7, 7);
+    background: linear-gradient(180deg, purple, navy);
+    box-shadow: 0 1px 2px 0 rgb(7, 7, 7);
     color: white;
     padding: 0 10px;
 

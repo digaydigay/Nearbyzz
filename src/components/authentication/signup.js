@@ -33,7 +33,7 @@ export default function SignUp() {
   });
   return (
     <>
-      <div className="sign_up_container">
+      <div className="signup_main">
         <div className="signup_container">
           <div className="signup_form_group">
             {/* signup Header */}
