@@ -1,3 +1,4 @@
+@import "./variable.scss";
 // header navbar starts
 .header_navbar {
   display: flex;
@@ -5,7 +6,8 @@
   align-items: center;
   display: flex;
   justify-content: space-evenly;
-  background: rgb(1, 1, 100);
+  background: $secondary;
+  color: $dark;
   padding: 10px 0 10px;
 
   border-radius: 10px;
@@ -24,10 +26,11 @@
     .search {
       display: flex;
       align-items: center;
-
+      color: $primary;
       .input_wrapper {
         margin: 0 5px;
         transition: all ease-in 200ms;
+
         input {
           height: 40px;
           border-radius: 10px;
@@ -38,6 +41,7 @@
           position: absolute;
           width: 0;
           overflow: hidden;
+          transition: all ease-in 500ms;
         }
       }
       .input_wrapper_expand {
@@ -47,12 +51,18 @@
       .search_btn {
         height: 40px;
         width: 40px;
-        border-radius: 50px;
-        background: linear-gradient(90deg, rgb(0, 0, 255), rgb(128, 0, 128));
-        color: white;
+        background: $secondary;
+        color: $primary;
+        font-size: 18px;
+        font-weight: bold;
+
+        @media screen and (max-width: "780px") {
+          border-right: 2px solid $dark;
+          margin-right: 5px;
+        }
       }
     }
-    // entertainment
+
     .entertainments {
       flex: 1;
       display: flex;
@@ -61,19 +71,18 @@
       i {
         pointer-events: none;
       }
+      a {
+        color: $dark;
+      }
       .entertainment {
         width: 40px;
         height: 40px;
-        color: rgb(255, 255, 255);
+
         display: flex;
         justify-content: center;
         align-items: center;
         margin: 0 5px;
-        border-radius: 50px;
         cursor: pointer;
-        &:hover {
-          color: rgba(189, 188, 188, 0.5);
-        }
       }
     }
   }

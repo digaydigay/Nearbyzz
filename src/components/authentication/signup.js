@@ -1,5 +1,6 @@
 import React, { useState } from "react";
-import nearbyzz from "../../assets/nearbyzz.png";
+import nearbyzztransparent from "../../assets/nearbyzztransparent.png";
+
 import { Formik, Form, Field } from "formik";
 import * as Yup from "yup";
 import Formactions from "./formactions";
@@ -40,7 +41,7 @@ export default function SignUp() {
             <div className="signup_form_header">
               <h2>Sign Up</h2>
               <div className="nextmedia_logo">
-                <img src={nearbyzz} alt="N" />
+                <img src={nearbyzztransparent} alt="N" />
               </div>
             </div>
 
@@ -175,9 +176,9 @@ export default function SignUp() {
 
             {/* signup footer */}
             <div className="signup_form_footer">
-              <h5>
+              <p>
                 Already have an Account? <a href="/signin">Log In</a>
-              </h5>
+              </p>
             </div>
           </div>
         </div>

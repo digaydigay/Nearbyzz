@@ -2,10 +2,10 @@ import React from "react";
 import { auth } from "../firebase";
 import { useAuth } from "../Context/AuthProvider";
 import { useHistory } from "react-router-dom";
-
 export default function HeaderNavDropdown() {
   const history = useHistory();
-  const { currentuser } = useAuth();
+  const { currentuser, setProfile } = useAuth();
+
   return (
     <div className="header_dropdown_main">
       <div className="bar_menu">
@@ -15,19 +15,19 @@ export default function HeaderNavDropdown() {
       <ul className="menu_list">
         {/* list start */}
         {currentuser && (
-          <li>
-            <div className="profile">
-              <div className="profile_image_container">
-                <div className="profile_image">
-                  {currentuser && currentuser.photoURL !== null ? (
+          <li onClick={setProfile}>
+            <a href={`/profile/${currentuser && currentuser.uid}`}>
+              <div className="profile">
+                <div className="profile_image_container">
+                  <div className="profile_image">
                     <img src={currentuser.photoURL} alt="user" />
-                  ) : (
-                    <i className="fas fa-user"></i>
-                  )}
+                  </div>
                 </div>
+                <h5 style={{ color: "white", paddingLeft: "5px" }}>
+                  {currentuser.displayName}
+                </h5>
               </div>
-              <h5>{currentuser.displayName}</h5>
-            </div>
+            </a>
           </li>
         )}
         {currentuser && (

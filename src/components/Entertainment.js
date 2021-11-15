@@ -1,11 +1,11 @@
 import { useState } from "react";
-
 export default function Entertainment() {
   const [active, setActive] = useState("home");
   const entertainment = (e) => {
     const { id } = e.target;
     setActive(id);
   };
+
   return (
     <div className="entertainments">
       <a href="/">

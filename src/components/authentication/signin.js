@@ -13,7 +13,7 @@ export default function SignIn() {
   return (
     <>
       <div className="signin_container">
-        <div className="signin_form_group">
+        <div className="signin_form">
           {/* signup Header */}
           <div className="signin_form_header">
             <h2>Sign In</h2>
@@ -114,9 +114,9 @@ export default function SignIn() {
 
           {/* signup footer */}
           <div className="signin_form_footer">
-            <h5>
+            <p>
               Need to Create? <a href="/signup">Sign up</a>
-            </h5>
+            </p>
           </div>
         </div>
       </div>

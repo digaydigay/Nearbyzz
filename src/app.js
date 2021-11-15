@@ -1,9 +1,8 @@
 import React from "react";
-import "./styles/global.scss";
 import { Switch, Route } from "react-router-dom";
-import "./styles/global.scss";
 import loader from "./assets/loader.gif";
 import { loaderContext } from "./Context/loader";
+
 // Compponents
 import Header from "./components/header";
 import Articles from "./components/article";
@@ -11,6 +10,7 @@ import SignUp from "./components/authentication/signup";
 import SignIn from "./components/authentication/signin";
 import Home from "./components/Wall";
 import Convos from "./components/Convos";
+import Profile from "./components/profile";
 // private Route
 import Privateroutes from "./private/privateroutes";
 // Provider
@@ -29,6 +29,7 @@ const App = () => {
     toggleCreate,
     setToggleCreate,
   } = UseStates();
+
   return (
     <div>
       <loaderContext.Provider value={{ loading, setLoading }}>
@@ -59,7 +60,8 @@ const App = () => {
                 component={Articles}
                 auth={false}
               />
-              <Privateroutes path="/convos" component={Convos} />
+              <Privateroutes path="/convos/:id" component={Convos} />
+              <Privateroutes path="/profile/:id" component={Profile} />
               <Route path="/signup" component={SignUp} />
               <Route path="/signup" component={SignUp} />
               <Route path="/signin" component={SignIn} />

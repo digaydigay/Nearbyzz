@@ -1,21 +1,21 @@
 import firebase from "firebase/app";
 import "firebase/auth";
 import "firebase/firestore";
-const dotenv = require("dotenv");
-dotenv.config();
+import "firebase/storage";
 
 const app = firebase.initializeApp({
-  apiKey: "AIzaSyARUhx8nvU7dF3xvRQYZZYj_1Sydb81q8w",
-  authDomain: "nearbyzz.firebaseapp.com",
-  projectId: "nearbyzz",
-  storageBucket: "nearbyzz.appspot.com",
-  messagingSenderId: "185640988122",
-  appId: "1:185640988122:web:cdf8ec1cf468a70d26e4e3",
-  measurementId: "G-79GJNLVDMK",
+  apiKey: process.env.REACT_APP_FIREBASE_API_KEY,
+  authDomain: process.env.REACT_APP_FIREBASE_AUTH_DOMAIN,
+  projectId: process.env.REACT_APP_FIREBASE_PROECT_ID,
+  storageBucket: process.env.REACT_APP_FIREBASE_STORAGE_BUCKET,
+  messagingSenderId: process.env.REACT_APP_FIREBASE_MESSAGING_SENDER_ID,
+  appId: process.env.REACT_APP_FIREBASE_APP_ID,
+  measurementId: process.env.REACT_APP_FIREBASE_MEASUREMENT_ID,
 });
 export const db = app.firestore();
-console.log(process.env.API_KEY);
 export const auth = app.auth();
+export const storage = app.storage();
+
 export const Google = new firebase.auth.GoogleAuthProvider();
-export const Facebook =new firebase.auth.FacebookAuthProvider()
+export const Facebook = new firebase.auth.FacebookAuthProvider();
 export default app;

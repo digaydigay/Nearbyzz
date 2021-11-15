@@ -7,7 +7,10 @@ export const useAuth = () => {
 };
 export const AuthProvider = ({ children }) => {
   const [currentuser, setCurrentuser] = useState({});
+  const [currentUserData, setCurrentUserData] = useState([]);
   const [username, setUsername] = useState();
+  const [user, setUser] = useState();
+  const [dp, setdp] = useState();
 
   const signup = (email, password) => {
     return auth.createUserWithEmailAndPassword(email, password);
@@ -24,11 +27,14 @@ export const AuthProvider = ({ children }) => {
   const facebook = () => {
     return auth.signInWithPopup(Facebook);
   };
+
   useEffect(() => {
-    return auth.onAuthStateChanged((user) => {
+    const unsunscribe = auth.onAuthStateChanged((user) => {
       setCurrentuser(user);
     });
+    return unsunscribe;
   }, []);
+
   const values = {
     currentuser,
     setCurrentuser,
@@ -39,6 +45,12 @@ export const AuthProvider = ({ children }) => {
     facebook,
     username,
     setUsername,
+    user,
+    setUser,
+    dp,
+    setdp,
+    currentUserData,
+    setCurrentUserData,
   };
   return <Authcontext.Provider value={values}>{children}</Authcontext.Provider>;
 };

@@ -1,63 +1,156 @@
-.chat_container {
-  width: 500px;
-  max-width: 500px;
-  position: absolute;
-  right: 60px;
-  bottom: 10px;
-  border-radius: 10px;
-  overflow: hidden;
+@import "./variable.scss";
 
-  .chat_head {
-    background: linear-gradient(90deg, blue, purple);
+.chat_message_wrapper {
+  padding: 0 5px 0 40px;
+  margin-top: 10px;
+  position: relative;
+  min-height: 0px;
+
+  .chat_message {
+    height: 100%;
+    word-wrap: break-word;
+    .message {
+      max-width: 200px;
+      display: flex;
+    }
+  }
+}
+.user_message {
+  padding: 0 40px 0 5px;
+  .profile_image_container {
+    position: absolute;
+    max-width: 30px;
+    height: 30px;
+    border-radius: 50px;
+
+    bottom: 0;
+    right: 0;
+    .profile_image {
+      width: 30px;
+      height: 30px;
+      background: $linear;
+      color: white;
+      box-shadow: 0 1px 2px 1px black;
+      border-radius: 50px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 20px;
+
+      img {
+        border-radius: 50%;
+      }
+    }
+  }
+  .chat_message {
+    height: 100%;
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-end;
+    .message {
+      background: white;
+      display: flex;
+      justify-content: flex-end;
+      max-width: 50%;
+      padding: 5px 10px;
+      border-radius: 20px 20px 5px 20px;
+
+      word-break: break-all;
+    }
+  }
+}
+.not_user_message {
+  padding: 0 5px 0 40px;
+  .profile_image_container {
+    position: absolute;
+    max-width: 30px;
+    height: 30px;
+    border-radius: 50px;
+
+    top: 0;
+    left: 0;
+    .profile_image {
+      width: 30px;
+      height: 30px;
+      background: $linear;
+      color: white;
+      box-shadow: 0 1px 2px 1px black;
+      border-radius: 50px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 20px;
+
+      img {
+        border-radius: 50%;
+      }
+    }
+  }
+  .chat_message {
+    height: 100%;
+    display: flex;
+    justify-content: flex-start;
+    .message {
+      background: white;
+      display: flex;
+
+      max-width: 50%;
+      padding: 5px 10px;
+      border-radius: 5px 20px 20px 20px;
+
+      word-break: break-all;
+    }
+  }
+}
+
+.form_chat {
+  height: 100%;
+  width: 100%;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 0 0 10px 0;
+
+  .send_image {
+    width: 30px;
+    height: 30px;
+    background: $linear;
+    color: white;
+    display: flex;
+    justify-content: center;
     align-items: center;
+    border-radius: 50px;
+    box-shadow: 0 1px 2px 1px black;
+    cursor: pointer;
+    margin-right: 10px;
+    margin-bottom: 5px;
   }
-  .chat_message_contents {
-    height: 500px;
-    background: white;
-    overflow-x: hidden;
-    .chat_message_wrapper {
-      display: flex;
-      padding: 0 10px;
-    }
-    .chat_message {
-      display: flex;
-      margin: 10px 0 10px;
-      padding: 10px;
-      justify-content: flex-end;
-    }
-    .user_message {
-      justify-content: flex-end;
-      .chat_message {
-        display: flex;
-        margin: 10px 0 10px;
-        padding: 10px;
-        justify-content: flex-end;
-        background: linear-gradient(blue, #e70994);
-        border-radius: 20px 20px 5px 20px;
-      }
-    }
-    .reciever_message {
-      display: flex;
-      .chat_message {
-        display: flex;
-        margin: 10px 0 10px;
-        padding: 10px;
-        justify-content: flex-end;
-        background: linear-gradient(-180deg, #e70994, blue);
-        border-radius: 20px 20px 20px 5px;
-      }
-    }
-  }
-  .chat_input {
+  > form {
+    width: 100%;
+
     display: flex;
-    input {
+    align-items: center;
+
+    > input {
       flex: 1;
+      padding: 0 10px;
       height: 40px;
-      border-radius: 5px;
-      border: 1px solid rgb(128, 0, 122);
-      padding: 0 10px 0 10px;
+      border-radius: 10px;
+      margin: 0 10px;
+    }
+    .send {
+      width: 30px;
+      height: 30px;
+      background: $linear;
+      color: white;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border-radius: 50px;
+      box-shadow: 0 1px 2px 1px black;
+      cursor: pointer;
+      margin-right: 10px;
     }
   }
 }

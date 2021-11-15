@@ -1,0 +1,275 @@
+@import "./variable.scss";
+.profile_section {
+  height: calc(100vh - 55px);
+  animation: popin 300ms ease-in 1;
+  overflow: scroll;
+  overflow-x: hidden;
+  background: $bg;
+  .cover_section {
+    width: 100%;
+    height: 315px;
+    background: $linear;
+    display: flex;
+    justify-content: center;
+    .cover_wrapper {
+      width: 815px;
+      max-width: 815px;
+      max-height: 100%;
+      background: $primary;
+      display: flex;
+      justify-content: center;
+      position: relative;
+      img {
+        width: auto;
+        max-width: 100%;
+        height: 100%;
+      }
+
+      > label {
+        position: absolute;
+        bottom: 10px;
+        right: 10px;
+        cursor: pointer;
+        background: $dark;
+        z-index: 1000;
+        height: 40px;
+        width: 40px;
+        color: white;
+        border-radius: 50px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        box-shadow: 0 1px 2px 1px black;
+
+        i {
+          pointer-events: none;
+        }
+        &:hover {
+          transform: scale(0.9);
+        }
+      }
+    }
+  }
+  .profile_picture_section {
+    display: flex;
+    justify-content: center;
+    cursor: pointer;
+    position: relative;
+
+    &::before {
+      content: "";
+      height: 100px;
+      width: 100%;
+      background: linear-gradient(
+        rgba(17, 17, 17, 0),
+        rgba(17, 17, 17, 0.1),
+        rgba(17, 17, 17, 0.2),
+        rgba(17, 17, 17, 0.3),
+        rgba(17, 17, 17, 0.4),
+        rgba(17, 17, 17, 0.5)
+      );
+      transform: translateY(-100%);
+    }
+    .image {
+      position: absolute;
+      width: 200px;
+      height: 200px;
+      max-width: 200px;
+
+      border-radius: 50%;
+
+      transform: translateY(-50%);
+      box-shadow: 0 5px 2px 1px black;
+
+      img {
+        width: 100%;
+        height: 100%;
+        border-radius: 50%;
+      }
+
+      label {
+        position: absolute;
+        bottom: 10px;
+        right: 10px;
+        cursor: pointer;
+        background: $dark;
+        height: 40px;
+        width: 40px;
+        color: white;
+        border-radius: 50px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        box-shadow: 0 1px 2px 1px white;
+        i {
+          pointer-events: none;
+        }
+        &:hover {
+          transform: scale(0.9);
+        }
+      }
+    }
+  }
+  .profile_name_section {
+    // background: rgb(242, 162, 14);
+    text-align: center;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    max-width: 300px;
+    min-height: 50px;
+    border-radius: 10px;
+
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 10px 30px 5px;
+    word-break: normal;
+    margin: 20px 0 30px;
+
+    .update_name {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      display: grid;
+      width: 100%;
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: auto auto;
+
+      input {
+        grid-column: span 2;
+        height: 50px;
+        width: 300px;
+        font-size: 20px;
+        padding: 0 10px;
+        border: 2px solid white;
+        border-radius: 10px;
+      }
+
+      button {
+        background: $linear;
+        color: white;
+        width: 100%;
+        border-radius: 10px;
+      }
+    }
+    > i {
+      position: absolute;
+      right: 0;
+      top: 50%;
+
+      transform: translate(50%, -50%);
+      cursor: pointer;
+      background: $bg;
+      color: $dark;
+      width: 30px;
+      height: 30px;
+      border-radius: 50px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      &:hover {
+        transform: translate(50%, -50%) scale(0.9);
+      }
+    }
+  }
+  .bio_section {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 15px;
+
+    .bio_wrapper {
+      word-break: break-all;
+      width: 300px;
+      max-width: 300px;
+      min-height: 100px;
+      color: $text;
+      border-radius: 10px;
+      padding: 5px 10px;
+      position: relative;
+      text-align: center;
+      .update_bio {
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        height: 100%;
+        width: 100%;
+        position: absolute;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr auto;
+
+        textarea {
+          grid-column: span 2;
+          height: 100%;
+          font-size: 20px;
+          padding: 5px 10px;
+          border-radius: 10px;
+          word-break: break-all;
+          max-width: 300px;
+          min-width: 300px;
+          max-height: 80px;
+          min-height: 80px;
+          font-size: 15px;
+          text-align: center;
+        }
+
+        button {
+          background: $linear;
+          color: white;
+          border-radius: 10px;
+        }
+      }
+      > i {
+        position: absolute;
+        right: 0;
+        top: 50%;
+        transform: translate(50%, -50%);
+        cursor: pointer;
+        background: $bg;
+        color: $dark;
+
+        width: 30px;
+        height: 30px;
+        border-radius: 50px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        &:hover {
+          transform: translate(50%, -50%) scale(0.9);
+        }
+      }
+    }
+  }
+  .profile_nav {
+    margin-top: 5px;
+    height: 40px;
+    width: 815px;
+    max-width: 815px;
+    background: $secondary;
+    padding: 0 10px;
+    display: flex;
+    justify-content: flex-start;
+    margin: 5px auto;
+    border-radius: 20px;
+    ul {
+      display: flex;
+      align-items: center;
+
+      li {
+        margin-right: 10px;
+        padding: 5px 10px;
+        color: $text;
+        cursor: pointer;
+      }
+    }
+  }
+  .posts_section {
+    background: $secondary;
+    min-height: 500px;
+    text-align: center;
+    padding: 10px;
+  }
+}

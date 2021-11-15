@@ -1,5 +1,6 @@
+@import "./variable.scss";
 .left_sidebar {
-  background: linear-gradient(90deg, purple, navy);
+  background: $bg;
   position: relative;
   width: 100px;
   overflow: hidden;
@@ -24,7 +25,7 @@
       border-radius: 50px;
       box-shadow: 0 1px 2px 1px black;
       color: white;
-      background: linear-gradient(90deg, purple, navy);
+      background: $primary;
       display: flex;
       justify-content: center;
       align-items: center;

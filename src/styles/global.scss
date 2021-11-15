@@ -1,3 +1,5 @@
+@import "./variable.scss";
+
 * {
   margin: 0;
   padding: 0;
@@ -5,9 +7,6 @@
   font-family: "Montserrat", sans-serif;
   scroll-behavior: smooth;
 }
-$primary: rgb(0, 0, 83);
-$secondary: rgb(1, 1, 102);
-$thirshary: blue;
 
 #nextmedia {
   max-width: 2500px;
@@ -15,7 +14,8 @@ $thirshary: blue;
 }
 .entertainment_active {
   border-bottom: 2px solid white;
-  background: linear-gradient(90deg, rgb(0, 0, 255), rgb(128, 0, 128));
+
+  color: $primary;
 
   i {
     pointer-events: none;
@@ -24,6 +24,7 @@ $thirshary: blue;
 
 img {
   width: 100%;
+  height: 100%;
 }
 
 .nextmedia_logo {
@@ -50,17 +51,18 @@ ul {
   list-style: none;
 }
 .error_message {
-  color: rgb(253, 110, 110);
+  color: rgb(250, 250, 250);
+
   letter-spacing: 2px;
   font-size: 13px;
-  background: linear-gradient(90deg, purple, navy);
-  border-radius: 5px;
+  background: $linear;
+  border-radius: 0 0 5px 5px;
   padding: 3px;
   text-align: center;
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 25px;
+  min-height: 25px;
 }
 .profile {
   display: flex;
@@ -88,14 +90,14 @@ ul {
   }
 }
 .loading {
-  background: rgba(0, 0, 0, 0.3);
+  background: rgba(0, 0, 0, 0.7);
   position: fixed;
   height: 100vh;
   width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
-  z-index: 1000;
+  z-index: 3000;
   .loader {
     width: 100px;
     height: 100px;
@@ -106,21 +108,6 @@ ul {
   width: 100%;
   background: navy;
 }
-
-@import "./header.scss";
-@import "./headdropdown.scss";
-@import "./article.scss";
-@import "./signup.scss";
-@import "./signin.scss";
-@import "./wall.scss";
-@import "./chat.scss";
-@import "./createpost.scss";
-@import "./chatlist.scss";
-@import "./wall_left_sidebar.scss";
-@import "./wall_right_sidebar.scss";
-@import "./navigationbar.scss";
-@import "./notification.scss";
-@import "./convos.scss";
 
 @keyframes popin {
   0% {

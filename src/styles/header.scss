@@ -1,3 +1,4 @@
+@import "./variable.scss";
 .header_main {
   position: relative;
   z-index: 10004;
@@ -7,20 +8,21 @@
   .header_container {
     min-height: 55px;
     width: 100%;
-    background: linear-gradient(180deg, purple, navy);
+    background: $primary;
     box-shadow: 0 1px 2px 0 rgb(7, 7, 7);
-    color: white;
+    color: $textNdark;
     padding: 0 10px;
 
-    display: grid;
-    grid-template-columns: 1fr auto;
+    display: flex;
+    justify-content: space-between;
     align-items: center;
 
     //   left sidebar
     .left_header {
       display: flex;
       align-items: center;
-      color: #fdd4ef;
+      color: $textNdark;
+      font-weight: 300;
     }
 
     // nav_center start
