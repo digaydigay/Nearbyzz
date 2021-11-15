@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import User from "./user";
-import { useAuth } from "../Context/AuthProvider";
 import { db } from "../firebase";
 import { useParams } from "react-router-dom";
 // components
