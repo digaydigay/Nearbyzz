@@ -5,7 +5,7 @@ import { loaderContext } from "./Context/loader";
 
 // Compponents
 import Header from "./components/header";
-import Articles from "./components/article";
+
 import SignUp from "./components/authentication/signup";
 import SignIn from "./components/authentication/signin";
 import Home from "./components/Wall";
@@ -55,11 +55,7 @@ const App = () => {
             <Header />
             <Switch>
               <Privateroutes exact path="/" component={Home} />
-              <Privateroutes
-                path="/articles"
-                component={Articles}
-                auth={false}
-              />
+
               <Privateroutes path="/convos/:id" component={Convos} />
               <Privateroutes path="/profile/:id" component={Profile} />
               <Route path="/signup" component={SignUp} />

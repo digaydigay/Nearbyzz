@@ -1,7 +1,7 @@
 import React from "react";
 import { useState } from "react";
 import { db } from "../firebase";
-import firebase from "firebase";
+
 import { useAuth } from "../Context/AuthProvider";
 
 export default function Sendmessages() {
