@@ -57,7 +57,7 @@ export default function CreatePost() {
             uploadImage.map((img, index) => {
               return (
                 <div className="image" key={index}>
-                  <img src={URL.createObjectURL(img)} />
+                  <img src={URL.createObjectURL(img)} alt="img" />
                   <i
                     className="fas fa-times"
                     onClick={() => {
