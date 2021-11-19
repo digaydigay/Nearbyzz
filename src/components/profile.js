@@ -26,7 +26,7 @@ export default function Profile() {
     };
 
     user();
-  }, [id]);
+  }, [id, setLoading]);
 
   const handleOnChangeDP = async (e) => {
     setLoading(true);
