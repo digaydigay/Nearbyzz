@@ -8,7 +8,6 @@ import Chat from "./chat";
 import { useEffect } from "react/cjs/react.development";
 export default function Convos() {
   const [chats, setChats] = useState([]);
-  console.log(chats);
 
   useEffect(() => {
     const chatList = async () => {
@@ -60,24 +59,6 @@ export default function Convos() {
 
         {/*convos_messages_main*/}
         <div className="convos_messages_main">
-          {/*  convos_messages*/}
-          <ul className="convos_messages">
-            <li>
-              <div className="message">
-                <div className="message_dp">
-                  <User />
-                </div>
-
-                <div className="message_content">
-                  <div className="name">
-                    <h5>Jonthan Digay</h5>
-                  </div>
-                </div>
-              </div>
-            </li>
-          </ul>
-          {/*  convos_messages*/}
-
           {/* active_convo_message_main */}
           <div className="active_convo_message_main">
             {/* active_convo_message */}

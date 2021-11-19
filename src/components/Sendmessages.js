@@ -19,7 +19,7 @@ export default function Sendmessages() {
           text,
           photoURL: currentuser.photoURL,
           uid: currentuser.uid,
-          createdAt: firebase.firestore.FieldValue.serverTimestamp(),
+          createdAt: Date.now(),
         }));
     } catch (e) {
       console.log(e);

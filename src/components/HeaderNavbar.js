@@ -17,8 +17,6 @@ export default function HeaderNavbar() {
           <Entertainment />
           {/* entertainments end */}
           {/* norication start */}
-          <Notification />
-          {/* notification ends */}
         </div>
       </div>
     </>
